@@ -32,6 +32,8 @@ header nav{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 .navbar-star{
     width: fit-content;
@@ -54,6 +56,9 @@ header nav{
 .mode-icon{
     cursor: pointer;
 }
+.mode-icon i:first-child{
+    animation: dark 0.5s ease;
+}
 .mode-icon i:last-child{
     display: none;
 }
@@ -65,12 +70,16 @@ main{
     padding-right: 6rem;
     padding-top: 10rem;
     padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
 }
 .search{
     width: 100%;
     height: fit-content;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 .search-input{
     display: flex;
@@ -110,7 +119,6 @@ main{
 }
 .check-con{
     display: flex;
-    align-items: end;
 }
 .check-con select{
     width: 220px;
@@ -118,7 +126,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: end;
-    padding-left: 1rem;
+    padding-left: 1rem; 
     padding-right: 1rem;
     outline: none;
     font-size: 14px;
@@ -126,9 +134,142 @@ main{
     border: 1px solid var(--darkModeHader);
     color: var(--LightModeHader);
     box-shadow: 0px 0px 1em #0000002c;
+    cursor: pointer;
 }
 .countries-in{
     width: 100%;
+    height: 100vh;
     height: fit-content;
     padding-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
 }   
+.countries-1{
+    width: 20%;
+    background-color: var(--darkModeHader);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    cursor: pointer;
+}
+.countries-1 img{
+    width: 100%;
+    height: 100%;
+}
+.countries-img{
+    width: 100%;
+    height: 100%;
+}
+.countries-lable{
+    display: flex;
+    flex-direction: column;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 1rem;
+}
+.countries-lable-1{
+    font-size: 17px;
+    color:var(--LightModeHader);
+    font-weight:700;
+    margin-bottom: 0.5em;
+}
+.countries-lable-2{
+    font-size: 13px;
+    color:var(--LightModeMean);
+    font-weight:700;
+    margin-bottom: 0.5em;
+}
+.mode{
+    cursor: pointer;
+}
+
+.mode-title-in .mode-title:last-child{
+    display: none;
+    animation: dark 0.5s ease;
+}
+.mode-title-in .mode-title:first-child{
+    display: block;
+    animation: dark 0.5s ease;
+}
+.DarkBody {
+    --darkModeHader:hsl(0, 0%, 100%);
+    --darkModeMean: hsl(0, 0%, 98%) ;
+    --DarkGray:hsl(0, 0%, 52%);
+    --LightModeHader:hsl(209, 23%, 22%);
+    --LightModeMean:hsl(207, 26%, 17%);
+}
+.DarkMode .mode-icon i:last-child{
+    display: block;
+    transform: scale(1);
+    animation: dark 0.5s ease;
+}
+.DarkMode .mode-icon i:first-child{
+    display: none;
+}
+.DarkMode .mode-title:last-child{
+    display: block;
+}
+.DarkMode .mode-title:first-child{
+    display: none;
+    animation: dark 0.5s ease;
+}
+@keyframes dark {
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+@media only screen and (max-width:1225px) {
+    header{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    main{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+@media only screen and (max-width:1150px) {
+    .countries-1{
+        width: 300px;
+    }
+}
+@media only screen and (max-width:680px) {
+    main{
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    .search-input{
+        width: 100%;
+    }
+    .input-in{
+        width: 100%;
+    }
+    .input-in input{
+        width: 100%;
+    }
+    .countries-1{
+        width: 100%;
+    }
+    .navbar-star{
+        font-size: 20px;
+    }
+    .navbar-end{
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width:450px) {
+    .navbar-star{
+        font-size: 18px;
+    }
+    .navbar-end{
+        font-size: 15px;
+    }
+    .mode{
+        gap: 0.3rem !important;
+    }
+}

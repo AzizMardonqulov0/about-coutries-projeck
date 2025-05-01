@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countreis Api</title>
-    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header>
@@ -14,12 +14,15 @@
                 Were in the word
             </div>
             <div class="navbar-end">
-                <div class="mode">
+                <div onclick="DarkMode()" id="mode" class="mode">
                     <div class="mode-icon">
                         <i class="fa-solid fa-sun"></i>
                         <i class="fa-solid fa-moon noneI"></i>
                     </div>
-                    <div class="mode-title">Light Mode </div>
+                    <div class="mode-title-in">
+                        <div  class="mode-title">Light Mode </div>
+                        <div  class="mode-title">Dark Mode </div>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -30,7 +33,7 @@
                 <label  for="con">Search Countreis..</label>
                 <div class="input-in">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="search" id="con" placeholder="Uzbekiston">
+                    <input id="searchInput" type="search" id="con" placeholder="Uzbekiston">
                 </div>
             </div>
             <div class="check-con">
@@ -45,90 +48,10 @@
                     <option value="Algeria">Algeria</option>
                     <option value="Variant7">Brazil</option>
                     <option value="Variant8">Ilind Island</option>
-                <section>
+                </select>
             </div>
         </div>
-        <div class="countries-in">
-            <div class="countries-1">
-                <div class="countries-img">
-                    <img src="./img/countries/1.png" alt="">
-                </div>
-                <div class="countries-lable">
-                    <div class="countries-lable-1">Germany</div>
-                    <div class="countries-lable-2">Population : <span>87,770,900</span></div>
-                    <div class="countries-lable-2">Capital : <span>Berlin</span></div>
-                </div>
-            </div>
-            <div class="countries-1">
-                <div class="countries-img">
-                    <img src="./img/countries/1.png" alt="">
-                </div>
-                <div class="countries-lable">
-                    <div class="countries-lable-1">Germany</div>
-                    <div class="countries-lable-2">Population : <span>87,770,900</span></div>
-                    <div class="countries-lable-2">Capital : <span>Berlin</span></div>
-                </div>
-            </div>
-            <div class="countries-1">
-                <div class="countries-img">
-                    <img src="./img/countries/1.png" alt="">
-                </div>
-                <div class="countries-lable">
-                    <div class="countries-lable-1">Germany</div>
-                    <div class="countries-lable-2">Population : <span>87,770,900</span></div>
-                    <div class="countries-lable-2">Capital : <span>Berlin</span></div>
-                </div>
-            </div>
-            <div class="countries-1">
-                <div class="countries-img">
-                    <img src="./img/countries/1.png" alt="">
-                </div>
-                <div class="countries-lable">
-                    <div class="countries-lable-1">Germany</div>
-                    <div class="countries-lable-2">Population : <span>87,770,900</span></div>
-                    <div class="countries-lable-2">Capital : <span>Berlin</span></div>
-                </div>
-            </div>
-            <div class="countries-1">
-                <div class="countries-img">
-                    <img src="./img/countries/1.png" alt="">
-                </div>
-                <div class="countries-lable">
-                    <div class="countries-lable-1">Germany</div>
-                    <div class="countries-lable-2">Population : <span>87,770,900</span></div>
-                    <div class="countries-lable-2">Capital : <span>Berlin</span></div>
-                </div>
-            </div>
-            <div class="countries-1">
-                <div class="countries-img">
-                    <img src="./img/countries/1.png" alt="">
-                </div>
-                <div class="countries-lable">
-                    <div class="countries-lable-1">Germany</div>
-                    <div class="countries-lable-2">Population : <span>87,770,900</span></div>
-                    <div class="countries-lable-2">Capital : <span>Berlin</span></div>
-                </div>
-            </div>
-            <div class="countries-1">
-                <div class="countries-img">
-                    <img src="./img/countries/1.png" alt="">
-                </div>
-                <div class="countries-lable">
-                    <div class="countries-lable-1">Germany</div>
-                    <div class="countries-lable-2">Population : <span>87,770,900</span></div>
-                    <div class="countries-lable-2">Capital : <span>Berlin</span></div>
-                </div>
-            </div>
-            <div class="countries-1">
-                <div class="countries-img">
-                    <img src="./img/countries/1.png" alt="">
-                </div>
-                <div class="countries-lable">
-                    <div class="countries-lable-1">Germany</div>
-                    <div class="countries-lable-2">Population : <span>87,770,900</span></div>
-                    <div class="countries-lable-2">Capital : <span>Berlin</span></div>
-                </div>
-            </div>
+        <div id="countriesIn" class="countries-in">
         </div>
     </main>
     <script src="./app.js"></script>
