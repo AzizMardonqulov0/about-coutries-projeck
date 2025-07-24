@@ -1,5 +1,77 @@
 [
   {
+    "name": "Uzbekistan",
+    "topLevelDomain": [".uz"],
+    "alpha2Code": "Uz",
+    "alpha3Code": "UZB",
+    "callingCodes": ["98"],
+    "capital": "Toshkent",
+    "altSpellings": ["Uz", "Uzbekiston"],
+    "subregion": "Southern Asia",
+    "region": "Asia",
+    "population": "37,027,063"    ,
+    "latlng": [34, 65],
+    "demonym": "Uzbek",
+    "area": 448900,
+    "timezones": ["UTC+04:30"],
+    "borders": ["IRN", "PAK", "TKM", "AFG", "TJK", "KZ"],
+    "nativeName": "Uzbeklar",
+    "numericCode": "004",
+    "flags": {
+      "svg": "https://tse3.mm.bing.net/th/id/OIP._hjQM5psW1HAljMpnrcuJwHaHa?rs=1&pid=ImgDetMain",
+      "png": "https://media.istockphoto.com/id/1204588605/vector/flag-of-republic-of-uzbekistan.jpg?s=612x612&w=0&k=20&c=3sAW_tHOZVD-avAGzb-ZKdWGjuMbkydR1b83Lpcd-zw="
+    },
+    "currencies": [
+      {
+        "code": "AFN",
+        "name": "Afghan afghani",
+        "symbol": "؋"
+      }
+    ],
+    "languages": [
+      {
+        "iso639_1": "uz",
+        "iso639_2": "pus",
+        "name": "Pashto",
+        "nativeName": "پښتو"
+      },
+      {
+        "iso639_1": "uz",
+        "iso639_2": "uzb",
+        "name": "Uzbek",
+        "nativeName": "Oʻzbek"
+      },
+      {
+        "iso639_1": "tk",
+        "iso639_2": "tuk",
+        "name": "Turkmen",
+        "nativeName": "Türkmen"
+      }
+    ],
+    "translations": {
+      "br": "Afghanistan",
+      "pt": "Afeganistão",
+      "nl": "Afghanistan",
+      "hr": "Afganistan",
+      "fa": "افغانستان",
+      "de": "Afghanistan",
+      "es": "Afganistán",
+      "fr": "Afghanistan",
+      "ja": "アフガニスタン",
+      "it": "Afghanistan",
+      "hu": "Afganisztán"
+    },
+    "flag": "https://flagcdn.com/af.svg",
+    "regionalBlocs": [
+      {
+        "acronym": "SAARC",
+        "name": "South Asian Association for Regional Cooperation"
+      }
+    ],
+    "cioc": "AFG",
+    "independent": true
+  },
+  {
     "name": "Afghanistan",
     "topLevelDomain": [".af"],
     "alpha2Code": "AF",

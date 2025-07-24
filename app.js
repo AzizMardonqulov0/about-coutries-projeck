@@ -5,6 +5,7 @@ let result = []
 const div = document.createElement("div");
 const p = document.createElement("p")
 let searchInput = document.getElementById("searchInput");
+let popApp = document.getElementById('popApp');
 fetch('data.json')
 .then(response => response.json())
 .then(data => {
@@ -17,10 +18,11 @@ fetch('data.json')
         let divLable1 = document.createElement("div")
         let divLable2 = document.createElement("div")
         let divLable3 = document.createElement("div")
-        console.log(i)
+
 
         p.textContent += data[i].name
         div.className="countries-1";
+        div.id="country";
         divImg.className="countries-img";
         img.src=data[i].flag;
         divLable1.textContent=data[i].name
@@ -38,12 +40,46 @@ fetch('data.json')
         divLable.appendChild(divLable3);
         divImg.appendChild(img)
       }
+      let ContreDiv =  document.querySelectorAll(".countries-1")
+      ContreDiv.forEach((div , index) =>{
+            div.addEventListener("click" , ()=>{
+                console.log(data[index + 1].name);
+                popApp.classList.add("slider");
+                console.log(i)
+                popApp.innerHTML=
+                `   
+                <div class="popApp1">
+                    <div class="popApp-button">
+                        <div id="back" class="back">
+                        <i class="fa-solid fa-left-long"></i> Back</div>
+                    <div class="popApp-img">
+                        <img src="${data[index + 1].flag}" alt="">
+                    </div>
+                    </div>
+                    <div class="popApp-lable">
+                       <div class="popApp-lable-1">${data[index + 1].name}</div> 
+                       <div class="popApp-lable-1">${data[index + 1].nativeName}</div>
+                        <div class="popApp-lable-1">${data[index + 1].population}</div> 
+                       <div class="popApp-lable-1">${data[index + 1].demonym}</div>
+                       <div class="popApp-lable-1">${data[index + 1].alpha3Code}</div> 
+                       <div class="popApp-lable-1">${data[index + 1].callingCodes}</div>
+
+
+                    </div>
+                </div>
+                `
+                document.getElementById("back").addEventListener("click" , ()=>{
+                    popApp.classList.remove("slider");
+                })
+                let backBtn = document.getElementById("back");
+                backBtn.addEventListener('click', function () {
+                    popApp.classList.remove("slider");
+                });
+            })
+
+})
 })
 .catch(error => console.error('Xatolik:', error));
-
-searchInput.addEventListener("keypress" , function(event){
-
-})
 
 function DarkMode(){
     mode.classList.toggle("DarkMode")

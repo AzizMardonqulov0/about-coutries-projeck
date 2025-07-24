@@ -157,6 +157,7 @@ main{
 .countries-1 img{
     width: 100%;
     height: 100%;
+    object-fit: fill;
 }
 .countries-img{
     width: 100%;
@@ -214,6 +215,55 @@ main{
 .DarkMode .mode-title:first-child{
     display: none;
     animation: dark 0.5s ease;
+}
+.popApp{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 10;
+    top: -170vh;
+    left: 0;
+    background-color: var(--darkModeMean);
+    padding-top: 8rem;
+    padding-left: 7rem;
+    padding-right: 7rem;
+}
+.popApp1{
+    display: flex;
+    justify-content: space-between;
+}
+.popApp-button{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: var(--LightModeMean);
+}
+.popApp-button img{
+    width: 100%;
+}
+.back{
+    width: fit-content;
+    padding: 15px 30px;
+    font-size: 22PX;
+    background-color: var(--darkModeHader);
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+.slider{
+    top: 0;
+}
+.popApp-lable{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    color: var(--LightModeHader);
+    justify-content: center;
+    gap: 1rem;
 }
 @keyframes dark {
     from{
